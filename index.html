@@ -6,46 +6,32 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
   <div class="container">
     <h1>📘 മദ്റസ വാർഷിക ഫലം</h1>
 
-    <table>
-      <tr>
-        <th>പേര്</th>
-        <td id="name"></td>
-      </tr>
-      <tr>
-        <th>ക്ലാസ്</th>
-        <td id="class"></td>
-      </tr>
-      <tr>
-        <th>റോൾ നമ്പർ</th>
-        <td id="roll"></td>
-      </tr>
-      <tr>
-        <th>വിഷയങ്ങൾ</th>
-        <td id="subjects"></td>
-      </tr>
-      <tr>
-        <th>മാർക്ക്</th>
-        <td id="mark"></td>
-      </tr>
-      <tr>
-        <th>ശതമാനം</th>
-        <td id="percentage"></td>
-      </tr>
-      <tr>
-        <th>റാങ്ക്</th>
-        <td id="rank"></td>
-      </tr>
-      <tr>
-        <th>ആകെ ഹാജർ</th>
-        <td id="attendance"></td>
-      </tr>
-    </table>
+    <div class="search-box">
+      <input type="number" id="rollInput" placeholder="റോൾ നമ്പർ നൽകുക">
+      <button onclick="searchResult()">Search</button>
+    </div>
+
+    <div id="resultSection" style="display:none;">
+      <table>
+        <tr><th>പേര്</th><td id="name"></td></tr>
+        <tr><th>ക്ലാസ്</th><td id="class"></td></tr>
+        <tr><th>റോൾ നമ്പർ</th><td id="roll"></td></tr>
+        <tr><th>വിഷയങ്ങൾ</th><td id="subjects"></td></tr>
+        <tr><th>മാർക്ക്</th><td id="mark"></td></tr>
+        <tr><th>ശതമാനം</th><td id="percentage"></td></tr>
+        <tr><th>റാങ്ക്</th><td id="rank"></td></tr>
+        <tr><th>ആകെ ഹാജർ</th><td id="attendance"></td></tr>
+      </table>
+      <button onclick="downloadPDF()">Download PDF</button>
+    </div>
   </div>
 
+  <!-- jsPDF library for PDF download -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   <script src="data.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
