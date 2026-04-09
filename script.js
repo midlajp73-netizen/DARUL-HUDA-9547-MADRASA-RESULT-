@@ -7,11 +7,18 @@ function searchResult() {
     document.getElementById("class").innerText = result.class;
     document.getElementById("roll").innerText = result.roll;
 
-    // Subject table fill
     const table = document.getElementById("marksTable");
     table.innerHTML = "";
 
+    let isFail = false;
+
     result.subjects.forEach(sub => {
+
+      // ✅ NEW RULE: pass mark = 18
+      if (sub.mark < 18) {
+        isFail = true;
+      }
+
       const row = `
         <tr>
           <td>${sub.name}</td>
@@ -27,7 +34,19 @@ function searchResult() {
     document.getElementById("rank").innerText = result.rank;
     document.getElementById("attendance").innerText = result.attendance;
 
+    // ✅ Status output
+    const statusElement = document.getElementById("status");
+
+    if (isFail) {
+      statusElement.innerText = "FAIL";
+      statusElement.style.color = "red";
+    } else {
+      statusElement.innerText = "PASS";
+      statusElement.style.color = "green";
+    }
+
     document.getElementById("resultSection").style.display = "block";
+
   } else {
     alert("Result not found!");
   }
