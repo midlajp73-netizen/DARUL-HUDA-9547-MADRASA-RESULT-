@@ -1,4 +1,19 @@
-function searchResult() {
+function searchResult() {function downloadPDF() {
+  const { jsPDF } = window.jspdf;
+
+  const element = document.getElementById("resultSection");
+
+  html2canvas(element).then(canvas => {
+    const imgData = canvas.toDataURL("image/png");
+
+    const pdf = new jsPDF();
+    const imgWidth = 190;
+    const imgHeight = canvas.height * imgWidth / canvas.width;
+
+    pdf.addImage(imgData, 'PNG', 10, 10, imgWidth, imgHeight);
+    pdf.save("result.pdf");
+  });
+}
   const rollNumber = document.getElementById("rollInput").value.trim();
   const result = students.find(student => student.roll == rollNumber);
 
