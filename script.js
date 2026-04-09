@@ -1,19 +1,4 @@
-function searchResult() {function downloadPDF() {
-  const { jsPDF } = window.jspdf;
-
-  const element = document.getElementById("resultSection");
-
-  html2canvas(element).then(canvas => {
-    const imgData = canvas.toDataURL("image/png");
-
-    const pdf = new jsPDF();
-    const imgWidth = 190;
-    const imgHeight = canvas.height * imgWidth / canvas.width;
-
-    pdf.addImage(imgData, 'PNG', 10, 10, imgWidth, imgHeight);
-    pdf.save("result.pdf");
-  });
-}
+function searchResult() {
   const rollNumber = document.getElementById("rollInput").value.trim();
   const result = students.find(student => student.roll == rollNumber);
 
@@ -28,8 +13,6 @@ function searchResult() {function downloadPDF() {
     let isFail = false;
 
     result.subjects.forEach(sub => {
-
-      // ✅ NEW RULE: pass mark = 18
       if (sub.mark < 18) {
         isFail = true;
       }
@@ -49,7 +32,6 @@ function searchResult() {function downloadPDF() {
     document.getElementById("rank").innerText = result.rank;
     document.getElementById("attendance").innerText = result.attendance;
 
-    // ✅ Status output
     const statusElement = document.getElementById("status");
 
     if (isFail) {
@@ -65,4 +47,23 @@ function searchResult() {function downloadPDF() {
   } else {
     alert("Result not found!");
   }
+}
+
+
+// ✅ PDF FUNCTION (OUTSIDE)
+function downloadPDF() {
+  const { jsPDF } = window.jspdf;
+
+  const element = document.getElementById("resultSection");
+
+  html2canvas(element).then(canvas => {
+    const imgData = canvas.toDataURL("image/png");
+
+    const pdf = new jsPDF();
+    const imgWidth = 190;
+    const imgHeight = canvas.height * imgWidth / canvas.width;
+
+    pdf.addImage(imgData, 'PNG', 10, 10, imgWidth, imgHeight);
+    pdf.save("result.pdf");
+  });
 }
