@@ -2,7 +2,7 @@ const students = [
   {
     name: "Muhammed Fawzan",
     class: "8",
-    roll: "801",
+    roll: "801"
     subjects: [
       { name: "Fiqh", total: 50, mark: 45 },
       { name: "Thareeq", total: 50, mark: 40 },
