@@ -6,56 +6,40 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>📘 മദ്റസ വാർഷിക ഫലം</h1>
+ <div class="container">
 
-    <div class="search-box">
-      <input type="number" id="rollInput" placeholder="റോൾ നമ്പർ നൽകുക">
-      <button onclick="searchResult()">Search</button>
+  <h1>📘 മദ്റസ വാർഷിക ഫലം</h1>
+
+  <!-- 🔍 Search box -->
+  <div class="search-box">
+    <input type="number" id="rollInput" placeholder="റോൾ നമ്പർ നൽകുക">
+    <button onclick="searchResult()">Search</button>
+  </div>
+
+  <!-- ✅ RESULT SECTION (hidden initially) -->
+  <div id="resultSection" style="display:none;">
+
+    <!-- ✅ Header ഇവിടെ മാത്രം -->
+    <div class="header">
+      <img src="logo.png" class="logo">
+      <div class="header-text">
+        <h2>ബയാനുൽ ഇസ്ലാം മദ്റസ</h2>
+        <p>BAYANUL ISLAM MADRASA</p>
+        <small>EXAMINATION RESULT</small>
+      </div>
     </div>
 
-    <div class="header">
-  <img src="logo.png" alt="Madrasa Logo" class="logo">
+    <!-- ✅ Tables -->
+    <h2>വിദ്യാർത്ഥി വിവരങ്ങൾ</h2>
+    <table>...</table>
 
-  <div class="header-text">
-    <h2>ദാറുൽ ഹുദ മദ്റസ</h2>
-    <p>ദാറുൽ ഹുദ MADRASA</p>
-    <small>EXAMINATION RESULT</small>
+    <h2>വിഷയ മാർക്ക്</h2>
+    <table>...</table>
+
+    <h2>ഫലം</h2>
+    <table>...</table>
+
+    <button onclick="downloadPDF()">Download PDF</button>
+
   </div>
 </div>
-
-  <h2>വിദ്യാർത്ഥി വിവരങ്ങൾ</h2>
-  <table>
-    <tr><th>പേര്</th><td id="name"></td></tr>
-    <tr><th>ക്ലാസ്</th><td id="class"></td></tr>
-    <tr><th>റോൾ നമ്പർ</th><td id="roll"></td></tr>
-  </table>
-
-  <h2>വിഷയ മാർക്ക്</h2>
-  <table>
-    <tr>
-      <th>വിഷയം</th>
-      <th>ആകെ മാർക്ക്</th>
-      <th>ലഭിച്ചത്</th>
-    </tr>
-    <tbody id="marksTable"></tbody>
-  </table>
-
-  <h2>ഫലം</h2>
-  <table>
-    <tr><th>ആകെ മാർക്ക്</th><td id="total"></td></tr>
-    <tr><th>ശതമാനം</th><td id="percentage"></td></tr>
-    <tr><th>സ്റ്റാറ്റസ്</th><td id="status"></td></tr>
-    <tr><th>റാങ്ക്</th><td id="rank"></td></tr>
-    <tr><th>ഹാജർ</th><td id="attendance"></td></tr>
-  </table>
-
-  <button onclick="downloadPDF()">Download PDF</button>
-</div>
-
-  <!-- jsPDF library for PDF download -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-  <script src="data.js"></script>
-  <script src="script.js"></script>
-</body>
-</html>
