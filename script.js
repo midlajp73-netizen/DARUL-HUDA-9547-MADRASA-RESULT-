@@ -1,3 +1,4 @@
+console.log(students);
 function searchResult() {
   const rollNumber = document.getElementById("rollInput").value.trim();
   const result = students.find(student => student.roll == rollNumber);
