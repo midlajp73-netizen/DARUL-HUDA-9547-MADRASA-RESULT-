@@ -56,6 +56,10 @@ function downloadPDF() {
   const { jsPDF } = window.jspdf;
 
   const element = document.getElementById("resultSection");
+  const button = document.querySelector("button"); // select button
+
+  // ✅ Hide button
+  button.style.display = "none";
 
   html2canvas(element).then(canvas => {
     const imgData = canvas.toDataURL("image/png");
@@ -66,5 +70,8 @@ function downloadPDF() {
 
     pdf.addImage(imgData, 'PNG', 10, 10, imgWidth, imgHeight);
     pdf.save("result.pdf");
+
+    // ✅ Show button again
+    button.style.display = "block";
   });
 }
