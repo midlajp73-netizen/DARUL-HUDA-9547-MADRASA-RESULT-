@@ -18,14 +18,16 @@ const students = [
         "Name": "Azeem Hasan",
         "Class": 8,
         "RollNumber": 802,
-        "Fiqh": 0,
-        "Thareeq": 0,
-        "Duroos": 33,
-        "Lisan": 42,
+      subjects: [
+      { name: "Fiqh": total: 50, mark: 0 },
+      { name: "Thareeq": total: 50, mark: 0 },
+      { name: "Duroos": total: 50, mark: 33 },
+      { name: "Lisan": total: 50, mark: 42 }
+      ],
         "Total": 75,
-        "Percentage": 58,
-        "Rank": 6,
-        "Attendance": 116
+        "Percentage": “58”,
+        "Rank": “6”,
+        "Attendance": “116“
     },
     {
         "Name": "Aman Zayan",
