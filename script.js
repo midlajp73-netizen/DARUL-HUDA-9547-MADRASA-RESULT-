@@ -55,8 +55,18 @@ function searchResult() {
 
 // 📥 PDF FUNCTION (CLEAN)
 function downloadPDF() {
-  const element = document.getElementById("resultBox");
-  const btns = document.querySelector(".btns");
+  const element = document.getElementById("result");
+
+  const opt = {
+    margin:       0,
+    filename:     'result.pdf',
+    image:        { type: 'jpeg', quality: 1 },
+    html2canvas:  { scale: 2, useCORS: true },
+    jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
+  };
+
+  html2pdf().set(opt).from(element).save();
+}
 
   // Hide button
   if (btns) btns.style.display = "none";
