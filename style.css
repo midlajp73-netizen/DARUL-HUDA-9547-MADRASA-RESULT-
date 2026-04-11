@@ -105,4 +105,8 @@ button {
 }
 button:hover {
   background: #2ecc71;
+
+  .btns {
+  display: none;
+}
 }
