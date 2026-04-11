@@ -4,7 +4,11 @@
   <meta charset="UTF-8">
   <title>മദ്റസ ഫലം</title>
   <link rel="stylesheet" href="style.css">
+
+  <!-- ✅ html2pdf (use this only) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 </head>
+
 <body>
 
 <div class="container">
@@ -17,84 +21,88 @@
     <button onclick="searchResult()">Search</button>
   </div>
 
-  <!-- ✅ RESULT SECTION -->
-  <div id="resultSection" style="display:none;">
+  <!-- 📄 RESULT BOX (IMPORTANT FOR PDF) -->
+  <div id="resultBox">
 
-    <!-- Header -->
-    <div class="header">
-      <img src="logo.png" class="logo">
-      <div class="header-text">
-        <h2>ദാറുൽ ഹുദ മദ്റസ</h2>
-        <p>DARUL HUDA MADRASA</-text">
-        <small>EXAMINATION RESULT</small>
+    <!-- ✅ RESULT SECTION -->
+    <div id="resultSection" style="display:none;">
+
+      <!-- Header -->
+      <div class="header">
+        <img src="logo.png" class="logo">
+        <div class="header-text">
+          <h2>ദാറുൽ ഹുദ മദ്റസ</h2>
+          <p>DARUL HUDA MADRASA</p>
+          <small>EXAMINATION RESULT</small>
+        </div>
       </div>
+
+      <!-- Student Info -->
+      <h2>വിദ്യാർത്ഥി വിവരങ്ങൾ</h2>
+      <table>
+        <tr><th>പേര്</th><td id="name"></td></tr>
+        <tr><th>ക്ലാസ്</th><td id="class"></td></tr>
+        <tr><th>റോൾ നമ്പർ</th><td id="roll"></td></tr>
+      </table>
+
+      <!-- Marks -->
+      <h2>വിഷയ മാർക്ക്</h2>
+      <table>
+        <tr>
+          <th>വിഷയം</th>
+          <th>ആകെ</th>
+          <th>ലഭിച്ചത്</th>
+        </tr>
+        <tbody id="marksTable"></tbody>
+      </table>
+
+      <!-- Result -->
+      <h2>ഫലം</h2>
+      <table>
+        <tr><th>ആകെ മാർക്ക്</th><td id="total"></td></tr>
+        <tr><th>ശതമാനം</th><td id="percentage"></td></tr>
+        <tr><th>സ്റ്റാറ്റസ്</th><td id="status"></td></tr>
+        <tr><th>റാങ്ക്</th><td id="rank"></td></tr>
+        <tr><th>ഹാജർ</th><td id="attendance"></td></tr>
+      </table>
+
     </div>
 
-    <!-- ✅ Tables -->
-    <h2>വിദ്യാർത്ഥി വിവരങ്ങൾ</h2>
-<table>
-  <tr><th>പേര്</th><td id="name"></td></tr>
-  <tr><th>ക്ലാസ്</th><td id="class"></td></tr>
-  <tr><th>റോൾ നമ്പർ</th><td id="roll"></td></tr>
-</table>
+  </div> <!-- ✅ resultBox END -->
 
-    <h2>വിഷയ മാർക്ക്</h2>
-<table>
-  <tr>
-    <th>വിഷയം</th>
-    <th>ആകെ</th>
-    <th>ലഭിച്ചത്</th>
-  </tr>
-  <tbody id="marksTable"></tbody>
-</table>
+</div> <!-- container END -->
 
-    <h2>ഫലം</h2>
-<table>
-  <tr><th>ആകെ മാർക്ക്</th><td id="total"></td></tr>
-  <tr><th>ശതമാനം</th><td id="percentage"></td></tr>
-  <tr><th>സ്റ്റാറ്റസ്</th><td id="status"></td></tr>
-  <tr><th>റാങ്ക്</th><td id="rank"></td></tr>
-  <tr><th>ഹാജർ</th><td id="attendance"></td></tr>
-</table>
-
-    <button onclick="downloadPDF()">Download PDF</button>
-
-  </div>
+<!-- 🔘 Buttons (OUTSIDE resultBox) -->
+<div class="btns" style="text-align:center; margin:20px;">
+  <button onclick="downloadPDF()">📥 Download PDF</button>
 </div>
 
-    </div> <!-- resultSection -->
-</div> <!-- container -->
+<!-- ✅ PDF SCRIPT -->
+<script>
+function downloadPDF() {
+  const element = document.getElementById("resultBox");
+  const btns = document.querySelector(".btns");
 
-<!-- PDF Libraries -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  // 🔴 Hide button
+  btns.style.display = "none";
 
-  <!-- 🔘 Buttons (IMPORTANT: OUTSIDE resultBox) -->
-  <div class="btns" style="text-align:center; margin:20px;">
-    <button onclick="downloadPDF()">📥 Download PDF</button>
-  </div>
+  html2pdf().set({
+    margin: 5,
+    filename: 'Madrasa_Result.pdf',
+    html2canvas: { scale: 2 },
+    jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+  }).from(element).save().then(() => {
 
-  <!-- PDF Script -->
-  <script>
-  function downloadPDF() {
-    const element = document.getElementById("resultBox");
-    const btns = document.querySelector(".btns");
+    // 🟢 Show again
+    btns.style.display = "block";
 
-    btns.style.display = "none";
+  });
+}
+</script>
 
-    html2pdf().from(element).save().then(() => {
-      btns.style.display = "block";
-    });
-  }
-  </script>
-
-  <!-- Your JS file -->
-  <script src="script.js"></script>
-  
-<!-- Your Files -->
+<!-- Your Data + Script -->
 <script src="data.js"></script>
 <script src="script.js"></script>
 
 </body>
 </html>
-
