@@ -27,7 +27,7 @@ const students = [
       { name: "Lisan", total: 50, mark: 42 }
     ],
     total: 111,
-    percentage: 79.5,
+    percentage: 55.5,
     rank: 2,
     attendance: 116
   },
