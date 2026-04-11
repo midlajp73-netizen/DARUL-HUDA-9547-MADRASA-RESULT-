@@ -47,7 +47,34 @@
 
       <!-- Marks -->
       <h2>MARK OF SUBJECTS</h2>
-      <table border="1" width="100%">
+      /* ========================= */
+/* 📄 PROFESSIONAL TABLE     */
+/* ========================= */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10px 0;
+  font-size: 15px;
+}
+
+th, td {
+  border: 1px solid #000;   /* ✅ real border control */
+  padding: 10px;
+  text-align: center;
+}
+
+/* Header style */
+th {
+  background: #2c3e50;
+  color: white;
+  font-weight: bold;
+}
+
+/* Row hover effect (optional) */
+tr:hover {
+  background: #f2f2f2;
+}
         <thead>
           <tr>
             <th>SUBJECT</th>
@@ -61,11 +88,11 @@
       <!-- Result -->
       <h2>RESULT</h2>
       <table>
-        <tr><th>TOTEL MARK</th><td id="total"></td></tr>
+        <tr><th>TOTAL MARK</th><td id="total"></td></tr>
         <tr><th>PERCENTAGE</th><td id="percentage"></td></tr>
         <tr><th>STATUS</th><td id="status"></td></tr>
         <tr><th>RANK</th><td id="rank"></td></tr>
-        <tr><th>HAJAR</th><td id="attendance"></td></tr>
+        <tr><th>ATTENDANCE</th><td id="attendance"></td></tr>
       </table>
 
       <!-- ✅ DOWNLOAD BUTTON (NOW INSIDE RESULT) -->
