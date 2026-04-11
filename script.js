@@ -1,3 +1,4 @@
+// 🔍 SEARCH FUNCTION
 function searchResult() {
   const rollNumber = document.getElementById("rollInput").value.trim().toString();
 
@@ -5,7 +6,6 @@ function searchResult() {
 
   if (result) {
 
-    // Fill data
     document.getElementById("name").innerText = result.name;
     document.getElementById("class").innerText = result.class;
     document.getElementById("roll").innerText = result.roll;
@@ -42,7 +42,7 @@ function searchResult() {
       statusElement.style.color = "green";
     }
 
-    // 🔥 VERY IMPORTANT (SHOW RESULT)
+    // ✅ SHOW RESULT
     document.getElementById("resultSection").style.display = "block";
 
   } else {
@@ -50,34 +50,24 @@ function searchResult() {
   }
 }
 
-// ✅ PDF FUNCTION (OUTSIDE)
-<script>
+
+// 📥 PDF FUNCTION (CLEAN)
 function downloadPDF() {
   const element = document.getElementById("resultBox");
+  const btns = document.querySelector(".btns");
+
+  // Hide button
+  if (btns) btns.style.display = "none";
 
   html2pdf().set({
     margin: 5,
     filename: 'Madrasa_Result.pdf',
     html2canvas: { scale: 2 },
     jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
-  }).from(element).save();
-}
-</script>
+  }).from(element).save().then(() => {
 
-  // ✅ Hide button
-  button.style.display = "none";
+    // Show again
+    if (btns) btns.style.display = "block";
 
-  html2canvas(element).then(canvas => {
-    const imgData = canvas.toDataURL("image/png");
-
-    const pdf = new jsPDF();
-    const imgWidth = 190;
-    const imgHeight = canvas.height * imgWidth / canvas.width;
-
-    pdf.addImage(imgData, 'PNG', 10, 10, imgWidth, imgHeight);
-    pdf.save("result.pdf");
-
-    // 🟢 Show buttons again after PDF download
-    btns.style.display = "block";
   });
 }
