@@ -5,7 +5,7 @@
   <title>മദ്റസ ഫലം</title>
   <link rel="stylesheet" href="style.css">
 
-  <!-- ✅ html2pdf (use this only) -->
+  <!-- html2pdf -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 </head>
 
@@ -19,12 +19,12 @@
   <div class="search-box">
     <input type="number" id="rollInput" placeholder="റോൾ നമ്പർ നൽകുക">
     <button type="button" onclick="searchResult()">Search</button>
-    </div>
+  </div>
 
-  <!-- 📄 RESULT BOX (IMPORTANT FOR PDF) -->
+  <!-- 📄 RESULT BOX -->
   <div id="resultBox">
 
-    <!-- ✅ RESULT SECTION -->
+    <!-- RESULT SECTION -->
     <div id="resultSection" style="display:none;">
 
       <!-- Header -->
@@ -66,29 +66,23 @@
         <tr><th>ഹാജർ</th><td id="attendance"></td></tr>
       </table>
 
-    </div>
+    </div> <!-- resultSection END -->
 
-  <div id="resultBox">
+  </div> <!-- resultBox END -->
 
-  <div id="resultSection" style="display:none;">
-    <!-- result content -->
-  </div>
+</div> <!-- container END -->
 
-</div> <!-- resultBox END -->
-
-<!-- ✅ BUTTON HERE -->
-<div class="btns" id="pdfBtn" style="display:none;">
+<!-- ✅ BUTTON (OUTSIDE) -->
+<div class="btns" id="pdfBtn" style="display:none; text-align:center; margin:20px;">
   <button onclick="downloadPDF()">📥 Download PDF</button>
 </div>
-
 
 <!-- ✅ PDF SCRIPT -->
 <script>
 function downloadPDF() {
   const element = document.getElementById("resultBox");
-  const btns = document.querySelector(".btns");
+  const btns = document.getElementById("pdfBtn");
 
-  // 🔴 Hide button
   btns.style.display = "none";
 
   html2pdf().set({
@@ -97,15 +91,12 @@ function downloadPDF() {
     html2canvas: { scale: 2 },
     jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
   }).from(element).save().then(() => {
-
-    // 🟢 Show again
     btns.style.display = "block";
-
   });
 }
 </script>
 
-<!-- Your Data + Script -->
+<!-- Scripts -->
 <script src="data.js"></script>
 <script src="script.js"></script>
 
