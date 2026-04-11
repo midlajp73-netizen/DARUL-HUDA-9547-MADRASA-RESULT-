@@ -1,4 +1,5 @@
 // 🔍 SEARCH FUNCTION
+console.log(students);
 function searchResult() {
   const rollNumber = document.getElementById("rollInput").value.trim().toString();
 
