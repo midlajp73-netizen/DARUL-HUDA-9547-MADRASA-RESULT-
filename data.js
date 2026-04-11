@@ -4,31 +4,31 @@ const students = [
     class: "8",
     roll: "801",
     subjects: [
-      { name: "Fiqh", total: 50, mark: 45 },
-      { name: "Thareeq", total: 50, mark: 40 },
-      { name: "Duroos", total: 50, mark: 42 },
-      { name: "Lisan", total: 50, mark: 43 }
+      { name: "Fiqh", total: 50, mark: 27 },
+      { name: "Thareeq", total: 50, mark: 29 },
+      { name: "Duroos", total: 50, mark: 26 },
+      { name: "Lisan", total: 50, mark: 33 }
     ],
-    total: 170,
-    percentage: 85,
+    total: 115,
+    percentage: ,
     rank: 1,
-    attendance: 163
+    attendance: 186
   },
 
   // 👇 NEW STUDENT ADDED
   {
-    name: "Aman Zayan",
+    name: "Azeem Hassan",
     class: "8",
     roll: "802",
     subjects: [
-      { name: "Fiqh", total: 50, mark: 25 },
+      { name: "Fiqh", total: 50, mark: 18 },
       { name: "Thareeq", total: 50, mark: 42 },
-      { name: "Duroos", total: 50, mark: 40 },
-      { name: "Lisan", total: 50, mark: 39 }
+      { name: "Duroos", total: 50, mark: 33 },
+      { name: "Lisan", total: 50, mark: 42 }
     ],
     total: 159,
     percentage: 79.5,
     rank: 2,
-    attendance: 160
+    attendance: 116
   }
 ];
