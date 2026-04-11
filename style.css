@@ -73,11 +73,11 @@ h1 {
 
 .header-text p {
   margin: 0;
-  font-size: 13px;
+  font-size: 11px;
 }
 
 .header-text small {
-  font-size: 11px;
+  font-size: 9px;
   color: gray;
 }
 
