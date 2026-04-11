@@ -59,12 +59,12 @@ const students = [
     ],
     total: 111,
     percentage: 55.5,
-    rank: 3,
+    rank: 4,
     attendance: 116
   },
 
   {
-    name: "Muhammec Razin Razak",
+    name: "Muhammed Razin Razak",
     class: "8",
     roll: "805",
     subjects: [
@@ -75,7 +75,7 @@ const students = [
     ],
     total: 111,
     percentage: 55.5,
-    rank: 3,
+    rank: 5,
     attendance: 116
   },
 
@@ -91,7 +91,7 @@ const students = [
     ],
     total: 111,
     percentage: 55.5,
-    rank: 3,
+    rank: 6,
     attendance: 116
   }
 ];
