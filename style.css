@@ -1,3 +1,4 @@
+/* GENERAL STYLE */
 body {
   font-family: Arial, sans-serif;
   background: #f2f6f9;
@@ -5,6 +6,7 @@ body {
   padding: 0;
 }
 
+/* MAIN CONTAINER */
 .container {
   width: 90%;
   max-width: 600px;
@@ -15,11 +17,13 @@ body {
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
+/* TITLE */
 h1 {
   text-align: center;
   color: #2c3e50;
 }
 
+/* SEARCH BOX */
 .search-box {
   display: flex;
   justify-content: center;
@@ -38,6 +42,8 @@ h1 {
   font-size: 16px;
   cursor: pointer;
 }
+
+/* HEADER */
 .header {
   display: flex;
   align-items: center;
@@ -72,6 +78,7 @@ h1 {
   color: gray;
 }
 
+/* TABLE */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -94,6 +101,7 @@ tr:hover {
   background: #f1f1f1;
 }
 
+/* BUTTON */
 button {
   margin-top: 20px;
   padding: 10px 20px;
@@ -103,30 +111,43 @@ button {
   cursor: pointer;
   border-radius: 5px;
 }
+
 button:hover {
   background: #2ecc71;
 }
 
-/* PRINT STYLE */
+/* BUTTON GROUP */
+.btns {
+  text-align: center;
+  margin: 20px;
+}
+
+/* ✅ PRINT STYLE (FIXED PROPERLY) */
 @media print {
+
   body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background: white !important;
+    margin: 0;
+    padding: 0;
+    display: block;
   }
 
   html {
     background: white !important;
   }
 
-  #result {
+  .container {
+    box-shadow: none !important;
+    margin: 0 auto;
+  }
+
+  #resultSection {
     margin: auto;
     background: white !important;
   }
 
   .btns {
-    display: none;
+    display: none !important;
   }
 
   * {
