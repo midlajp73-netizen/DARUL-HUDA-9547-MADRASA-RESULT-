@@ -10,12 +10,11 @@ const students = [
       { name: "Lisan", total: 50, mark: 33 }
     ],
     total: 115,
-    percentage:85,
+    percentage: 57.5,
     rank: 1,
     attendance: 186
   },
 
-  // 👇 NEW STUDENT ADDED
   {
     name: "Azeem Hassan",
     class: "8",
@@ -32,7 +31,6 @@ const students = [
     attendance: 116
   },
 
-  // 👇 NEW STUDENT ADDED
   {
     name: "Aman Zayan",
     class: "8",
@@ -44,8 +42,8 @@ const students = [
       { name: "Lisan", total: 50, mark: 42 }
     ],
     total: 111,
-    percentage: 79.5,
-    rank: 2,
+    percentage: 55.5,
+    rank: 3,
     attendance: 116
   }
 ];
