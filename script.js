@@ -1,5 +1,5 @@
 function searchResult() {
-  const rollNumber = document.getElementById("rollInput").value.trim();
+  const rollNumber = document.getElementById("rollInput").value.trim().toString();
 
   const result = students.find(student => student.roll == rollNumber);
 
