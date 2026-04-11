@@ -81,7 +81,7 @@ h1 {
   color: gray;
 }
 
-/* ✅ RESULT SECTION CENTER FIX */
+/* RESULT SECTION CENTER FIX */
 #resultSection {
   width: 100%;
   display: flex;
@@ -115,7 +115,7 @@ tr:hover {
   background: #f1f1f1;
 }
 
-/* BUTTON */
+/* BUTTON (normal style) */
 button {
   margin-top: 20px;
   padding: 10px 20px;
@@ -130,15 +130,39 @@ button:hover {
   background: #2ecc71;
 }
 
-/* BUTTON GROUP */
+/* ========================= */
+/* 📥 DOWNLOAD BUTTON FIX    */
+/* ========================= */
+
 .btns {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
   text-align: center;
-  margin: 20px;
+  z-index: 999;
+}
+
+/* Download button style */
+.btns button {
+  padding: 12px 25px;
+  font-size: 16px;
+  background: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.btns button:hover {
+  background: #2ecc71;
 }
 
 /* ========================= */
-/* ✅ PRINT / PDF STYLE FIX  */
+/* 🖨 PRINT / PDF STYLE      */
 /* ========================= */
+
 @media print {
 
   body {
