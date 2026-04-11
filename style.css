@@ -127,5 +127,11 @@ button:hover {
 
   .btns {
     display: none;
+
+    @media print {
+  * {
+    box-shadow: none !important;
+  }
+}
   }
 }
