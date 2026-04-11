@@ -17,11 +17,11 @@ const students = [
 
   // 👇 NEW STUDENT ADDED
   {
-    name: "Abdullah",
+    name: "Aman Zayan",
     class: "8",
     roll: "802",
     subjects: [
-      { name: "Fiqh", total: 50, mark: 38 },
+      { name: "Fiqh", total: 50, mark: 25 },
       { name: "Thareeq", total: 50, mark: 42 },
       { name: "Duroos", total: 50, mark: 40 },
       { name: "Lisan", total: 50, mark: 39 }
