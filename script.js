@@ -1,7 +1,6 @@
 // 🔍 SEARCH FUNCTION
-console.log(students);
 function searchResult() {
-  const rollNumber = document.getElementById("rollInput").value.trim().toString();
+  const rollNumber = document.getElementById("rollInput").value.trim();
 
   const result = students.find(student => student.roll == rollNumber);
 
@@ -43,7 +42,7 @@ function searchResult() {
       statusElement.style.color = "green";
     }
 
-    // ✅ SHOW RESULT
+    // ✅ SHOW RESULT + BUTTON
     document.getElementById("resultSection").style.display = "block";
     document.getElementById("pdfBtn").style.display = "block";
 
@@ -53,23 +52,12 @@ function searchResult() {
 }
 
 
-// 📥 PDF FUNCTION (CLEAN)
+// 📥 PDF DOWNLOAD FUNCTION
 function downloadPDF() {
-  const element = document.getElementById("result");
+  const element = document.getElementById("resultSection");
+  const btns = document.getElementById("pdfBtn");
 
-  const opt = {
-    margin:       0,
-    filename:     'result.pdf',
-    image:        { type: 'jpeg', quality: 1 },
-    html2canvas:  { scale: 2, useCORS: true },
-    jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
-  };
-
-  html2pdf().set(opt).from(element).save();
-}
-
-  // Hide button
-  if (btns) btns.style.display = "none";
+  btns.style.display = "none";
 
   html2pdf().set({
     margin: 5,
@@ -77,9 +65,6 @@ function downloadPDF() {
     html2canvas: { scale: 2 },
     jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
   }).from(element).save().then(() => {
-
-    // Show again
-    if (btns) btns.style.display = "block";
-
+    btns.style.display = "block";
   });
 }
