@@ -66,13 +66,13 @@
         <tr><th>ഹാജർ</th><td id="attendance"></td></tr>
       </table>
 
-    </div> <!-- resultSection END -->
+    </div>
 
-  </div> <!-- resultBox END -->
+  </div>
 
-</div> <!-- container END -->
+</div>
 
-<!-- ✅ BUTTON (OUTSIDE) -->
+<!-- ✅ BUTTON -->
 <div class="btns" id="pdfBtn" style="display:none; text-align:center; margin:20px;">
   <button onclick="downloadPDF()">📥 Download PDF</button>
 </div>
@@ -80,10 +80,9 @@
 <!-- ✅ PDF SCRIPT -->
 <script>
 function downloadPDF() {
-  const element = document.getElementById("resultBox");
-  const btns = document.getElementById("pdfBtn");
+  const element = document.getElementById("resultSection");
 
-  btns.style.display = "none";
+  document.getElementById("pdfBtn").style.display = "none";
 
   html2pdf().set({
     margin: 5,
@@ -91,12 +90,12 @@ function downloadPDF() {
     html2canvas: { scale: 2 },
     jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
   }).from(element).save().then(() => {
-    btns.style.display = "block";
+    document.getElementById("pdfBtn").style.display = "block";
   });
 }
 </script>
 
-<!-- Scripts -->
+<!-- DATA + LOGIC -->
 <script src="data.js"></script>
 <script src="script.js"></script>
 
