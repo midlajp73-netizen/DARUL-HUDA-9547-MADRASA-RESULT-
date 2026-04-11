@@ -45,6 +45,7 @@ function searchResult() {
 
     // ✅ SHOW RESULT
     document.getElementById("resultSection").style.display = "block";
+    document.getElementById("pdfBtn").style.display = "block";
 
   } else {
     alert("Result not found!");
