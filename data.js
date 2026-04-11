@@ -7,10 +7,10 @@ const students = [
       { name: "Fiqh", total: 50, mark: 27 },
       { name: "Thareeq", total: 50, mark: 29 },
       { name: "Duroos", total: 50, mark: 26 },
-      { name: "Lisan", total: 50, mark: 13 }
+      { name: "Lisan", total: 50, mark: 33 }
     ],
-    total: 95,
-    percentage: 47.5,
+    total: 115,
+    percentage: 57.5,
     rank: 1,
     attendance: 186
   },
@@ -36,15 +36,15 @@ const students = [
     class: "8",
     roll: "803",
     subjects: [
-      { name: "Fiqh", total: 50, mark: 18 },
-      { name: "Thareeq", total: 50, mark: 18 },
-      { name: "Duroos", total: 50, mark: 33 },
-      { name: "Lisan", total: 50, mark: 42 }
+      { name: "Fiqh", total: 50, mark: 29 },
+      { name: "Thareeq", total: 50, mark: 30 },
+      { name: "Duroos", total: 50, mark: 32 },
+      { name: "Lisan", total: 50, mark: 38 }
     ],
-    total: 111,
-    percentage: 55.5,
+    total: 129,
+    percentage: 64.5,
     rank: 3,
-    attendance: 116
+    attendance: 187
   },
 
   {
@@ -52,15 +52,15 @@ const students = [
     class: "8",
     roll: "804",
     subjects: [
-      { name: "Fiqh", total: 50, mark: 18 },
-      { name: "Thareeq", total: 50, mark: 18 },
-      { name: "Duroos", total: 50, mark: 33 },
+      { name: "Fiqh", total: 50, mark: 28 },
+      { name: "Thareeq", total: 50, mark: 32 },
+      { name: "Duroos", total: 50, mark: 31 },
       { name: "Lisan", total: 50, mark: 42 }
     ],
-    total: 111,
-    percentage: 55.5,
+    total: 133,
+    percentage: 66.5,
     rank: 4,
-    attendance: 116
+    attendance: 147
   },
 
   {
@@ -68,15 +68,15 @@ const students = [
     class: "8",
     roll: "805",
     subjects: [
-      { name: "Fiqh", total: 50, mark: 18 },
-      { name: "Thareeq", total: 50, mark: 18 },
-      { name: "Duroos", total: 50, mark: 33 },
-      { name: "Lisan", total: 50, mark: 42 }
+      { name: "Fiqh", total: 50, mark: 21 },
+      { name: "Thareeq", total: 50, mark: 27 },
+      { name: "Duroos", total: 50, mark: 24 },
+      { name: "Lisan", total: 50, mark: 34 }
     ],
-    total: 111,
-    percentage: 55.5,
+    total: 106,
+    percentage: 53,
     rank: 5,
-    attendance: 116
+    attendance: 173
   },
 
   {
@@ -84,14 +84,14 @@ const students = [
     class: "8",
     roll: "806",
     subjects: [
-      { name: "Fiqh", total: 50, mark: 18 },
-      { name: "Thareeq", total: 50, mark: 18 },
-      { name: "Duroos", total: 50, mark: 33 },
-      { name: "Lisan", total: 50, mark: 42 }
+      { name: "Fiqh", total: 50, mark: 19 },
+      { name: "Thareeq", total: 50, mark: 27 },
+      { name: "Duroos", total: 50, mark: 26 },
+      { name: "Lisan", total: 50, mark: 29 }
     ],
-    total: 111,
-    percentage: 55.5,
+    total: 101,
+    percentage: 50.5,
     rank: 6,
-    attendance: 116
+    attendance: 84
   }
 ];
