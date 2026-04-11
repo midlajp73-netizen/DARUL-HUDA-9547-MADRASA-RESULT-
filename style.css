@@ -4,17 +4,20 @@ body {
   background: #f2f6f9;
   margin: 0;
   padding: 0;
+  display: flex;
+  justify-content: center;
 }
 
 /* MAIN CONTAINER */
 .container {
   width: 90%;
-  max-width: 600px;
-  margin: 50px auto;
+  max-width: 700px;
+  margin: 40px auto;
   background: white;
-  padding: 20px;
+  padding: 25px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  text-align: center;
 }
 
 /* TITLE */
@@ -55,8 +58,8 @@ h1 {
 }
 
 .logo {
-  width: 55px;
-  height: 55px;
+  width: 60px;
+  height: 60px;
 }
 
 .header-text {
@@ -78,15 +81,25 @@ h1 {
   color: gray;
 }
 
-/* TABLE */
-table {
+/* ✅ RESULT SECTION CENTER FIX */
+#resultSection {
   width: 100%;
-  border-collapse: collapse;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   margin-top: 20px;
 }
 
+/* TABLE */
+table {
+  width: 90%;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
 th {
-  text-align: left;
+  text-align: center;
   background: #3498db;
   color: white;
   padding: 10px;
@@ -95,6 +108,7 @@ th {
 td {
   padding: 10px;
   border-bottom: 1px solid #ddd;
+  text-align: center;
 }
 
 tr:hover {
@@ -122,7 +136,9 @@ button:hover {
   margin: 20px;
 }
 
-/* ✅ PRINT STYLE (FIXED PROPERLY) */
+/* ========================= */
+/* ✅ PRINT / PDF STYLE FIX  */
+/* ========================= */
 @media print {
 
   body {
@@ -139,11 +155,18 @@ button:hover {
   .container {
     box-shadow: none !important;
     margin: 0 auto;
+    width: 100%;
   }
 
   #resultSection {
-    margin: auto;
-    background: white !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  table {
+    width: 100% !important;
+    margin: 0 auto !important;
   }
 
   .btns {
