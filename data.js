@@ -96,67 +96,67 @@ const students = [
   },
 
   {
-    name: "Muhammed Fawzan",
+    name: "Fella Fasil",
     class: "8",
-    roll: "801",
+    roll: "807",
     subjects: [
-      { name: "Fiqh", total: 50, mark: 27 },
-      { name: "Thareeq", total: 50, mark: 29 },
-      { name: "Duroos", total: 50, mark: 26 },
-      { name: "Lisan", total: 50, mark: 33 }
+      { name: "Fiqh", total: 50, mark: 32},
+      { name: "Thareeq", total: 50, mark: 33 },
+      { name: "Duroos", total: 50, mark: 25 },
+      { name: "Lisan", total: 50, mark: 30 }
     ],
-    total: 115,
-    percentage: 57.5,
+    total: 120,
+    percentage: 60,
     rank: 1,
-    attendance: 186
+    attendance: 107
   },
 
   {
-    name: "Muhammed Fawzan",
+    name: "Delfa Fathima",
     class: "8",
-    roll: "801",
+    roll: "808",
     subjects: [
-      { name: "Fiqh", total: 50, mark: 27 },
-      { name: "Thareeq", total: 50, mark: 29 },
-      { name: "Duroos", total: 50, mark: 26 },
-      { name: "Lisan", total: 50, mark: 33 }
+      { name: "Fiqh", total: 50, mark: 21 },
+      { name: "Thareeq", total: 50, mark: 18 },
+      { name: "Duroos", total: 50, mark: 24 },
+      { name: "Lisan", total: 50, mark: 11 }
     ],
-    total: 115,
-    percentage: 57.5,
+    total: 74,
+    percentage: 37,
     rank: 1,
-    attendance: 186
+    attendance: 122
   },
 
   {
-    name: "Muhammed Fawzan",
+    name: "Iza Fathima",
     class: "8",
-    roll: "801",
+    roll: "809",
     subjects: [
-      { name: "Fiqh", total: 50, mark: 27 },
-      { name: "Thareeq", total: 50, mark: 29 },
-      { name: "Duroos", total: 50, mark: 26 },
-      { name: "Lisan", total: 50, mark: 33 }
+      { name: "Fiqh", total: 50, mark: 34 },
+      { name: "Thareeq", total: 50, mark: 33 },
+      { name: "Duroos", total: 50, mark: 31 },
+      { name: "Lisan", total: 50, mark: 36 }
     ],
-    total: 115,
-    percentage: 57.5,
+    total: 134,
+    percentage: 67,
     rank: 1,
-    attendance: 186
+    attendance: 143
   },
 
   {
-    name: "Muhammed Fawzan",
+    name: "Badriya Febin",
     class: "8",
-    roll: "801",
+    roll: "810",
     subjects: [
-      { name: "Fiqh", total: 50, mark: 27 },
-      { name: "Thareeq", total: 50, mark: 29 },
-      { name: "Duroos", total: 50, mark: 26 },
-      { name: "Lisan", total: 50, mark: 33 }
+      { name: "Fiqh", total: 50, mark: 29 },
+      { name: "Thareeq", total: 50, mark: 34 },
+      { name: "Duroos", total: 50, mark: 27 },
+      { name: "Lisan", total: 50, mark: 40 }
     ],
-    total: 115,
-    percentage: 57.5,
+    total: 130,
+    percentage: 65,
     rank: 1,
-    attendance: 186
+    attendance: 166
   }
 
 ];
