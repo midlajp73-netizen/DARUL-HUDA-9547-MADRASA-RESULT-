@@ -10,7 +10,7 @@ const students = [
       { name: "Lisan", total: 50, mark: 33 }
     ],
     total: 115,
-    percentage: ,
+    percentage:85,
     rank: 1,
     attendance: 186
   },
@@ -30,7 +30,7 @@ const students = [
     percentage: 79.5,
     rank: 2,
     attendance: 116
-  }
+  },
 
   // 👇 NEW STUDENT ADDED
   {
