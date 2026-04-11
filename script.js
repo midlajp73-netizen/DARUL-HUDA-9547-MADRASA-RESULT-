@@ -71,7 +71,7 @@ function downloadPDF() {
     pdf.addImage(imgData, 'PNG', 10, 10, imgWidth, imgHeight);
     pdf.save("result.pdf");
 
-    // ✅ Show button again
-    button.style.display = "block";
+    // 🟢 Show buttons again after PDF download
+    btns.style.display = "block";
   });
 }
