@@ -7,10 +7,10 @@ const students = [
       { name: "Fiqh", total: 50, mark: 27 },
       { name: "Thareeq", total: 50, mark: 29 },
       { name: "Duroos", total: 50, mark: 26 },
-      { name: "Lisan", total: 50, mark: 33 }
+      { name: "Lisan", total: 50, mark: 13 }
     ],
-    total: 115,
-    percentage: 57.5,
+    total: 95,
+    percentage: 47.5,
     rank: 1,
     attendance: 186
   },
