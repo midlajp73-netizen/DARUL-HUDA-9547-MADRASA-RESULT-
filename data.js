@@ -45,5 +45,53 @@ const students = [
     percentage: 55.5,
     rank: 3,
     attendance: 116
+  },
+
+  {
+    name: "Izan Mithlaj",
+    class: "8",
+    roll: "804",
+    subjects: [
+      { name: "Fiqh", total: 50, mark: 18 },
+      { name: "Thareeq", total: 50, mark: 18 },
+      { name: "Duroos", total: 50, mark: 33 },
+      { name: "Lisan", total: 50, mark: 42 }
+    ],
+    total: 111,
+    percentage: 55.5,
+    rank: 3,
+    attendance: 116
+  },
+
+  {
+    name: "Muhammec Razin Razak",
+    class: "8",
+    roll: "805",
+    subjects: [
+      { name: "Fiqh", total: 50, mark: 18 },
+      { name: "Thareeq", total: 50, mark: 18 },
+      { name: "Duroos", total: 50, mark: 33 },
+      { name: "Lisan", total: 50, mark: 42 }
+    ],
+    total: 111,
+    percentage: 55.5,
+    rank: 3,
+    attendance: 116
+  },
+
+  {
+    name: "Muhammed Naji",
+    class: "8",
+    roll: "806",
+    subjects: [
+      { name: "Fiqh", total: 50, mark: 18 },
+      { name: "Thareeq", total: 50, mark: 18 },
+      { name: "Duroos", total: 50, mark: 33 },
+      { name: "Lisan", total: 50, mark: 42 }
+    ],
+    total: 111,
+    percentage: 55.5,
+    rank: 3,
+    attendance: 116
   }
 ];
