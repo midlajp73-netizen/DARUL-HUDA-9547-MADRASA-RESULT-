@@ -52,11 +52,18 @@ function searchResult() {
 
 
 // ✅ PDF FUNCTION (OUTSIDE)
+<script>
 function downloadPDF() {
-  const { jsPDF } = window.jspdf;
+  const element = document.getElementById("resultBox");
 
-  const element = document.getElementById("resultSection");
-  const button = document.querySelector("button"); // select button
+  html2pdf().set({
+    margin: 5,
+    filename: 'Madrasa_Result.pdf',
+    html2canvas: { scale: 2 },
+    jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+  }).from(element).save();
+}
+</script>
 
   // ✅ Hide button
   button.style.display = "none";
