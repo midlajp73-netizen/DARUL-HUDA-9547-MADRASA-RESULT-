@@ -9,9 +9,9 @@ const students = [
       { name: "Duroos", total: 50, mark: 42 },
       { name: "Lisan", total: 50, mark: 43 }
     ],
-    total: 170, // Correct total (45+40+42+43 = 170)
-    percentage: "85%", // Correct percentage
-    rank: "8",
-    attendance: "163"
+    total: 170,
+    percentage: 85,
+    rank: 8,
+    attendance: 163
   }
 ];
