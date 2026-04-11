@@ -105,22 +105,27 @@ button {
 }
 button:hover {
   background: #2ecc71;
+}
 
-  /* your existing CSS */
-
+/* PRINT STYLE */
 @media print {
   body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background: white !important;
+  }
+
+  html {
+    background: white !important;
   }
 
   #result {
     margin: auto;
+    background: white !important;
   }
-}
 
   .btns {
-  display: none;
-}
+    display: none;
+  }
 }
