@@ -24,7 +24,7 @@
   <!-- 📄 RESULT BOX -->
   <div id="resultBox">
 
-    <!-- RESULT SECTION -->
+    <!-- RESULT SECTION (PDF AREA) -->
     <div id="resultSection" style="display:none;">
 
       <!-- Header -->
@@ -47,12 +47,14 @@
 
       <!-- Marks -->
       <h2>വിഷയ മാർക്ക്</h2>
-      <table>
-        <tr>
-          <th>വിഷയം</th>
-          <th>ആകെ</th>
-          <th>ലഭിച്ചത്</th>
-        </tr>
+      <table border="1" width="100%">
+        <thead>
+          <tr>
+            <th>വിഷയം</th>
+            <th>ആകെ</th>
+            <th>ലഭിച്ചത്</th>
+          </tr>
+        </thead>
         <tbody id="marksTable"></tbody>
       </table>
 
@@ -66,15 +68,15 @@
         <tr><th>ഹാജർ</th><td id="attendance"></td></tr>
       </table>
 
+      <!-- ✅ DOWNLOAD BUTTON (NOW INSIDE RESULT) -->
+      <div class="btns" id="pdfBtn" style="text-align:center; margin-top:20px;">
+        <button onclick="downloadPDF()">📥 Download PDF</button>
+      </div>
+
     </div>
 
   </div>
 
-</div>
-
-<!-- ✅ BUTTON -->
-<div class="btns" id="pdfBtn" style="display:none; text-align:center; margin:20px;">
-  <button onclick="downloadPDF()">📥 Download PDF</button>
 </div>
 
 <!-- ✅ PDF SCRIPT -->
@@ -82,16 +84,12 @@
 function downloadPDF() {
   const element = document.getElementById("resultSection");
 
-  document.getElementById("pdfBtn").style.display = "none";
-
   html2pdf().set({
     margin: 5,
     filename: 'Madrasa_Result.pdf',
     html2canvas: { scale: 2 },
     jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
-  }).from(element).save().then(() => {
-    document.getElementById("pdfBtn").style.display = "block";
-  });
+  }).from(element).save();
 }
 </script>
 
