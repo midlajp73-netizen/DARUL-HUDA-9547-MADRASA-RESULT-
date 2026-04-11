@@ -18,6 +18,9 @@ body {
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
   text-align: center;
+
+  /* ✅ OUTER BORDER ADDED */
+  border: 2px solid #000;
 }
 
 /* TITLE */
@@ -82,84 +85,16 @@ h1 {
 }
 
 /* ========================= */
-/* 📄 FULL CENTER A4 FIX     */
+/* TABLE STYLE               */
 /* ========================= */
 
-@page {
-  size: A4;
-  margin: 15mm;
-}
-
-@media print {
-
-  body {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: white !important;
-  }
-
-  html {
-    width: 100%;
-    height: 100%;
-    background: white !important;
-  }
-
-  /* CENTER MAIN CONTENT */
-  .container {
-    width: 90%;
-    max-width: 700px;
-    margin: auto !important;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    box-shadow: none !important;
-    border: none !important;
-  }
-
-  /* CENTER RESULT SECTION */
-  #resultSection {
-    width: 100%;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    flex-direction: column;
-  }
-
-  /* CENTER TABLE */
-  table {
-    width: 100% !important;
-    margin: 0 auto !important;
-    text-align: center;
-  }
-
-  th, td {
-    text-align: center !important;
-  }
-
-  /* HIDE BUTTONS */
-  .btns,
-  button,
-  .search-box {
-    display: none !important;
-  }
-
-  * {
-    box-shadow: none !important;
-  }
-}
-
-/* TABLE */
 table {
   width: 90%;
   margin: 0 auto;
   border-collapse: collapse;
+
+  /* ✅ TABLE BORDER */
+  border: 1px solid #000;
 }
 
 th {
@@ -167,11 +102,13 @@ th {
   background: #3498db;
   color: white;
   padding: 10px;
+
+  border: 1px solid #000;
 }
 
 td {
   padding: 10px;
-  border-bottom: 1px solid #ddd;
+  border: 1px solid #000;   /* ✅ FULL CELL BORDER */
   text-align: center;
 }
 
@@ -179,7 +116,10 @@ tr:hover {
   background: #f1f1f1;
 }
 
-/* BUTTON (normal style) */
+/* ========================= */
+/* BUTTON STYLE              */
+/* ========================= */
+
 button {
   margin-top: 20px;
   padding: 10px 20px;
@@ -194,10 +134,7 @@ button:hover {
   background: #2ecc71;
 }
 
-/* ========================= */
-/* 📥 DOWNLOAD BUTTON FIX    */
-/* ========================= */
-
+/* DOWNLOAD BUTTON FIX */
 .btns {
   position: fixed;
   bottom: 20px;
@@ -207,7 +144,6 @@ button:hover {
   z-index: 999;
 }
 
-/* Download button style */
 .btns button {
   padding: 12px 25px;
   font-size: 16px;
@@ -224,44 +160,32 @@ button:hover {
 }
 
 /* ========================= */
-/* 🖨 PRINT / PDF STYLE      */
+/* PRINT / PDF STYLE         */
 /* ========================= */
 
 @media print {
 
   body {
     background: white !important;
-    margin: 0;
-    padding: 0;
     display: block;
   }
 
-  html {
-    background: white !important;
-  }
-
   .container {
-    box-shadow: none !important;
-    margin: 0 auto;
     width: 100%;
-  }
-
-  #resultSection {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-  }
-
-  table {
-    width: 100% !important;
-    margin: 0 auto !important;
-  }
-
-  .btns {
-    display: none !important;
-  }
-
-  * {
+    margin: 0 auto;
     box-shadow: none !important;
+
+    /* ✅ PRINT BORDER ALSO */
+    border: 2px solid #000 !important;
+  }
+
+  table, th, td {
+    border: 1px solid #000 !important;
+  }
+
+  .btns,
+  button,
+  .search-box {
+    display: none !important;
   }
 }
