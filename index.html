@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>മദ്റസ ഫലം</title>
+
   <link rel="stylesheet" href="style.css">
 
   <!-- html2pdf -->
@@ -15,7 +16,7 @@
 
   <h1>📘 മദ്റസ വാർഷിക ഫലം</h1>
 
-  <!-- 🔍 Search box -->
+  <!-- 🔍 SEARCH -->
   <div class="search-box">
     <input type="number" id="rollInput" placeholder="റോൾ നമ്പർ നൽകുക">
     <button type="button" onclick="searchResult()">Search</button>
@@ -24,71 +25,42 @@
   <!-- 📄 RESULT BOX -->
   <div id="resultBox">
 
-    <!-- RESULT SECTION (PDF AREA) -->
+    <!-- PDF AREA -->
     <div id="resultSection" style="display:none;">
 
-      <!-- Header -->
+      <!-- HEADER -->
       <div class="header">
         <img src="logo.png" class="logo">
+
         <div class="header-text">
-          <h2>ദാറുൽ ഹുദ മദ്റസ പൂനൂർ </h2>
+          <h2>ദാറുൽ ഹുദ മദ്റസ പൂനൂർ</h2>
           <p>DARUL HUDA MADRASA POONOOR</p>
           <small>FINAL EXAMINATION RESULT</small>
         </div>
       </div>
 
-      <!-- Student Info -->
-      <h2>STUDENTS DETAILS</h2>
+      <!-- STUDENT DETAILS -->
+      <h2>STUDENT DETAILS</h2>
       <table>
         <tr><th>NAME</th><td id="name"></td></tr>
         <tr><th>CLASS</th><td id="class"></td></tr>
         <tr><th>ROLL NUMBER</th><td id="roll"></td></tr>
       </table>
 
-      <!-- Marks -->
+      <!-- MARKS -->
       <h2>MARK OF SUBJECTS</h2>
-      /* ========================= */
-/* 📄 PROFESSIONAL TABLE     */
-/* ========================= */
+      <table>
+        <thead>
+          <tr>
+            <th>SUBJECT</th>
+            <th>TOTAL MARK</th>
+            <th>SCORED MARK</th>
+          </tr>
+        </thead>
+        <tbody id="marksTable"></tbody>
+      </table>
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 10px 0;
-  font-size: 15px;
-}
-
-th, td {
-  border: 1px solid #000;   /* ✅ real border control */
-  padding: 10px;
-  text-align: center;
-}
-
-/* Header style */
-th {
-  background: #2c3e50;
-  color: white;
-  font-weight: bold;
-}
-
-/* Row hover effect (optional) */
-tr:hover {
-  background: #f2f2f2;
-}
-     <h2>MARK OF SUBJECTS</h2>
-
-<table>
-  <thead>
-    <tr>
-      <th>SUBJECT</th>
-      <th>TOTAL MARK</th>
-      <th>SCORED MARKS</th>
-    </tr>
-  </thead>
-  <tbody id="marksTable"></tbody>
-</table>
-
-      <!-- Result -->
+      <!-- RESULT -->
       <h2>RESULT</h2>
       <table>
         <tr><th>TOTAL MARK</th><td id="total"></td></tr>
@@ -98,7 +70,7 @@ tr:hover {
         <tr><th>ATTENDANCE</th><td id="attendance"></td></tr>
       </table>
 
-      <!-- ✅ DOWNLOAD BUTTON (NOW INSIDE RESULT) -->
+      <!-- DOWNLOAD BUTTON -->
       <div class="btns" id="pdfBtn" style="text-align:center; margin-top:20px;">
         <button onclick="downloadPDF()">📥 Download PDF</button>
       </div>
@@ -109,7 +81,7 @@ tr:hover {
 
 </div>
 
-<!-- ✅ PDF SCRIPT -->
+<!-- PDF SCRIPT -->
 <script>
 function downloadPDF() {
   const element = document.getElementById("resultSection");
