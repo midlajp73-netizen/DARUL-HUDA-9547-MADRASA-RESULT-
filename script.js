@@ -23,10 +23,10 @@ function searchResult() {
   const table = document.getElementById("marksTable");
   table.innerHTML = "";
 
-  let isFail = Promoted;
+  let failCount = 0; // ✅ count failed subjects
 
   result.subjects.forEach(sub => {
-    if (Number(sub.mark) < 18) isFail = true;
+    if (Number(sub.mark) < 18) failCount++; // pass mark = 18
 
     table.innerHTML += `
       <tr>
@@ -44,12 +44,18 @@ function searchResult() {
 
   const statusElement = document.getElementById("status");
 
-  if (isFail) {
-    statusElement.innerText = Promoted";
-    statusElement.style.color = "red";
-  } else {
+  // ✅ RESULT LOGIC
+  if (failCount === 0) {
     statusElement.innerText = "PASS";
     statusElement.style.color = "green";
+
+  } else if (failCount <= 2) {
+    statusElement.innerText = "PROMOTED"; // 🔁 instead of Fail
+    statusElement.style.color = "orange";
+
+  } else {
+    statusElement.innerText = "FAIL";
+    statusElement.style.color = "red";
   }
 
   // SHOW RESULT
