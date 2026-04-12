@@ -11,7 +11,7 @@ const students = [
     ],
     total: 115,
     percentage: 57.5,
-    rank: 1,
+    rank: 6,
     attendance: 186
   },
 
@@ -27,7 +27,7 @@ const students = [
     ],
     total: 111,
     percentage: 55.5,
-    rank: 2,
+    rank: 7,
     attendance: 116
   },
 
@@ -43,7 +43,7 @@ const students = [
     ],
     total: 129,
     percentage: 64.5,
-    rank: 3,
+    rank: 4,
     attendance: 187
   },
 
@@ -59,7 +59,7 @@ const students = [
     ],
     total: 133,
     percentage: 66.5,
-    rank: 4,
+    rank: 2,
     attendance: 147
   },
 
@@ -75,7 +75,7 @@ const students = [
     ],
     total: 106,
     percentage: 53,
-    rank: 5,
+    rank: 8,
     attendance: 173
   },
 
@@ -91,7 +91,7 @@ const students = [
     ],
     total: 101,
     percentage: 50.5,
-    rank: 6,
+    rank: 9,
     attendance: 84
   },
 
@@ -107,7 +107,7 @@ const students = [
     ],
     total: 120,
     percentage: 60,
-    rank: 1,
+    rank: 5,
     attendance: 107
   },
 
@@ -123,7 +123,7 @@ const students = [
     ],
     total: 74,
     percentage: 37,
-    rank: 1,
+    rank: 10,
     attendance: 122
   },
 
@@ -155,7 +155,7 @@ const students = [
     ],
     total: 130,
     percentage: 65,
-    rank: 1,
+    rank: 3,
     attendance: 166
   }
 
