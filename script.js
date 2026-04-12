@@ -23,7 +23,7 @@ function searchResult() {
   const table = document.getElementById("marksTable");
   table.innerHTML = "";
 
-  let isFail = false;
+  let isFail = Promoted;
 
   result.subjects.forEach(sub => {
     if (Number(sub.mark) < 18) isFail = true;
@@ -45,7 +45,7 @@ function searchResult() {
   const statusElement = document.getElementById("status");
 
   if (isFail) {
-    statusElement.innerText = "FAIL";
+    statusElement.innerText = Promoted";
     statusElement.style.color = "red";
   } else {
     statusElement.innerText = "PASS";
