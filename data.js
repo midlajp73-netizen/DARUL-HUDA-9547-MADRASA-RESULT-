@@ -172,7 +172,7 @@ const students = [
     total: 104,
     percentage: 52,
     rank: 1,
-    attendance: 186
+    attendance: 181
   }
 
 ];
