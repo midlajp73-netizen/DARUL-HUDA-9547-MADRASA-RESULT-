@@ -157,6 +157,22 @@ const students = [
     percentage: 65,
     rank: 3,
     attendance: 166
+  },
+
+   {
+    name: "Rahdha Fathima",
+    class: "1",
+    roll: "901",
+    subjects: [
+      { name: "Fiqh", total: 50, mark: 30 },
+      { name: "Thareeq", total: 50, mark: 28 },
+      { name: "Duroos", total: 50, mark: 28 },
+      { name: "Lisan", total: 50, mark: 18 }
+    ],
+    total: 104,
+    percentage: 52,
+    rank: 1,
+    attendance: 186
   }
 
 ];
