@@ -161,7 +161,7 @@ const students = [
 
    {
     name: "Rahdha Fathima",
-    class: "1",
+    class: "9",
     roll: "901",
     subjects: [
       { name: "Fiqh", total: 50, mark: 30 },
